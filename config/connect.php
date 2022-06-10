@@ -1,10 +1,10 @@
 <?php
 abstract class DbModel{
     private static $db_host = 'localhost';
-    private static $db_user = 'id15870760_cristian';
-    private static $db_pass = 'Bu!Lbt?p#G8lgw2b';
+    private static $db_user = '';
+    private static $db_pass = '';
     private static $db_charset = 'utf8';
-    private static $db_name = 'id15870760_panerita';
+    private static $db_name = '';
     protected $connect;
     protected $query;
     protected $rows = array();
