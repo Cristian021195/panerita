@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="398.21" height="249" viewBox="0 0 398.21 249">
+  <g id="Grupo_1" data-name="Grupo 1" transform="translate(-144 -216)">
+    <rect id="Rectángulo_1" data-name="Rectángulo 1" width="272" height="200" rx="25" transform="translate(144 216)" fill="#f1a226"/>
+    <circle id="Elipse_1" data-name="Elipse 1" cx="42.5" cy="42.5" r="42.5" transform="translate(192 380)"/>
+    <path id="Trazado_1" data-name="Trazado 1" d="M797,690.482s101.479.388,145.7.518c11.356.15,14.585-34.749,4.3-64-8.91-25.334-25.735-44.571-36.822-56C896.312,556.707,884.5,539.3,867,539H826.483s.766,94.115,0,123.281S797,690.482,797,690.482Z" transform="translate(-411 -275)" fill="#47b1e5"/>
+    <path id="Trazado_2" data-name="Trazado 2" d="M5.155,0h26.8C34.8,0,34.2.258,59,30.539c4.4,9.056-3.4,9.829-6.25,9.829H5.155C2.308,40.368,0,37.657,0,34.313V6.055C0,2.71,2.308,0,5.155,0Z" transform="translate(429 280.001)" fill="#f2f2f2"/>
+    <g id="Elipse_4" data-name="Elipse 4" transform="translate(214 402)" fill="#fff" stroke="#707070" stroke-width="1">
+      <circle cx="21" cy="21" r="21" stroke="none"/>
+      <circle cx="21" cy="21" r="20.5" fill="none"/>
+    </g>
+    <circle id="Elipse_5" data-name="Elipse 5" cx="42.5" cy="42.5" r="42.5" transform="translate(429 380)"/>
+    <g id="Elipse_6" data-name="Elipse 6" transform="translate(451 402)" fill="#fff" stroke="#707070" stroke-width="1">
+      <circle cx="21" cy="21" r="21" stroke="none"/>
+      <circle cx="21" cy="21" r="20.5" fill="none"/>
+    </g>
+  </g>
+</svg>

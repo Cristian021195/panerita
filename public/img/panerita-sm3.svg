@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="800" height="800" viewBox="0 0 800 800">
+  <defs>
+    <clipPath id="clip-parner">
+      <rect width="800" height="800"/>
+    </clipPath>
+  </defs>
+  <g id="parner" clip-path="url(#clip-parner)">
+    <path id="Trazado_1" data-name="Trazado 1" d="M285.68-378.572h70.953q69.086,0,92.426-15.4t23.34-54.615q0-39.678-22.406-55.082t-93.359-15.4H285.68ZM64.885,0V-687.592H347.764q93.826,0,148.675,10.97t91.726,35.243q47.613,32.209,70.953,79.822t23.34,112.965q0,115.3-68.152,176.683T417.783-210.525H285.68V0Z" transform="translate(26 744)"/>
+  </g>
+</svg>

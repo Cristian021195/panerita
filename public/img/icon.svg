@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" viewBox="0 0 512 512">
+  <defs>
+    <filter id="P" x="75" y="-85" width="390.5" height="599.5" filterUnits="userSpaceOnUse">
+      <feOffset dx="15" dy="15" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="0.5" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <clipPath id="clip-Mesa_de_trabajo_1">
+      <rect width="512" height="512"/>
+    </clipPath>
+  </defs>
+  <g id="Mesa_de_trabajo_1" data-name="Mesa de trabajo – 1" clip-path="url(#clip-Mesa_de_trabajo_1)">
+    <path id="Trazado_1" data-name="Trazado 1" d="M256,0C397.385,0,512,114.615,512,256S397.385,512,256,512,0,397.385,0,256,114.615,0,256,0Z" fill="#a34c33"/>
+    <circle id="Elipse_2" data-name="Elipse 2" cx="164.066" cy="164.066" r="164.066" transform="translate(91.934 91.934)" fill="#ea8c37"/>
+    <rect id="Rectángulo_1" data-name="Rectángulo 1" width="448.408" height="126.917" rx="43" transform="translate(37.704 245.218)" fill="#cecb40"/>
+    <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#P)">
+      <text id="P-2" data-name="P" transform="translate(75 398)" fill="#f9f9f9" font-size="495" font-family="GlengaryNF, Glengary NF"><tspan x="0" y="0">P</tspan></text>
+    </g>
+  </g>
+</svg>

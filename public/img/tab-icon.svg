@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="181" height="181" viewBox="0 0 181 181">
+  <defs>
+    <clipPath id="clip-Mesa_de_trabajo_1">
+      <rect width="181" height="181"/>
+    </clipPath>
+  </defs>
+  <g id="Mesa_de_trabajo_1" data-name="Mesa de trabajo – 1" clip-path="url(#clip-Mesa_de_trabajo_1)">
+    <path id="Trazado_1" data-name="Trazado 1" d="M90.5,0A90.5,90.5,0,1,1,0,90.5,90.5,90.5,0,0,1,90.5,0Z" fill="#a34c33"/>
+    <circle id="Elipse_2" data-name="Elipse 2" cx="58" cy="58" r="58" transform="translate(32.5 32.5)" fill="#ea8c37"/>
+    <rect id="Rectángulo_1" data-name="Rectángulo 1" width="162" height="48" rx="24" transform="translate(9.5 66.5)" fill="#cecb40"/>
+  </g>
+</svg>

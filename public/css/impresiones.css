@@ -1,0 +1,24 @@
+
+.div-comp{
+    /*background-color: rgba(247, 255, 94, 0.408);*/
+    background-image: url("https://i.ibb.co/Cs1QZ6R/logo-impr-sm.png");
+    background-repeat: no-repeat;
+    background-position: center; 
+    background-size: 400px 400px;
+    background-origin: content-box;
+    padding: 0.2em;
+    border-radius: 0.2em;
+    margin: 0.2em;
+    border: 0.2em solid #000;
+    margin-bottom: 5px;
+}
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+.fondo{
+    background-color: rgba(247, 255, 94, 0.408);
+}
+/*tr,th{
+    border-color: rgba(0, 0, 0, 0.279);
+}*/
