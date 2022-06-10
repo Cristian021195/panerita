@@ -1,0 +1,47 @@
+<div class="border border-light rounded">
+
+    <div class="rounded-top p-2 alert-info d-flex justify-content-evenly flex-wrap" id="sectionHeader">
+        <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+            <span id="loader"></span>
+            <span class="pagado br-left"></span>
+            <span class="pendiente"></span> 
+            <span class="deudor br-right"></span>
+        </div>
+        <form method="POST" id="filtrarStock">
+            <div class="row g-3 align-items-center">
+                <div class="col-auto">
+                    <label for="producto">Producto</label>
+                </div>
+                <div class="col-auto">
+                    <input type="text" name="producto" id="f_producto" placeholder="Nombre del producto.." class="form-control">
+                </div>
+                <div class="col-auto">
+                    <label for="zona">Zona</label>
+                </div>
+                <div class="col-auto">
+                    <select class="form-select" id="f_zona" name="zona">
+                        <option value="catamarca">Catamarca</option>
+                        <option value="tucuman">Tucuman</option>
+                    </select>
+                </div>
+                <div class="col-auto">
+                    <input type="submit" value="Todos" class="btn btn-info">
+                    <button class="btn" id="recargar">🔄</button>
+                </div>
+                <!--<div class="col-auto">
+                    
+                </div>-->
+            </div>
+        </form>
+    </div>
+    <div class="overflow-scroll overflow v-scroll pl-2 ">
+        <div id="error2"></div>
+        <div class="text-center" id="sectionFirst"></div>
+    </div>
+    <div class="rounded-bottom" id="sectionSecond">
+        <nav aria-label="...">
+            <ul class="pagination justify-content-center mb-1" id="paginacion"> 
+            </ul>
+        </nav>
+    </div>
+</div>

@@ -1,0 +1,46 @@
+<div class="border border-light rounded">
+    <div class="rounded-top p-2 alert-info d-flex justify-content-evenly flex-wrap" id="sectionHeader">
+        <!--<div class="col-md-2"><h3 id="section-title">🖨️ Carga Masiva</h3></div>-->
+        <!--<div class="btn-group" role="group" aria-label="Basic mixed styles example">
+            <span class="pendiente br-left">Comprobantes 125</span>
+            <span class="pagado br-right">Total $255000.25</span>
+            <span class="deudor">2</span>
+        </div>-->
+        <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#generarCargaMasiva">➕ Generar Carga Masiva</button>
+        </div>
+    </div>
+    <div class="p-3 bg-light" id="sectionFirst"></div>
+    <div class="rounded-bottom" id="sectionSecond">
+        <nav aria-label="...">
+            <ul class="pagination justify-content-center mb-1" id="paginacion"> 
+            </ul>
+        </nav>
+    </div>
+</div>
+
+<form class="modal fade" id="generarCargaMasiva" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">🖨️ Generar Carga Masiva</h5>
+                <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="cuerpoCargaMasiva">
+                <div class="form-group text-danger" id="error"></div>
+                <label for="cajones" class="form-label">Cajones</label>
+                <input type="number" class="form-control" id="cajones" name="cajones" min="0" step="1" required>
+                <label for="desde" class="form-label">Resumen Desde</label>
+                <input type="date" class="form-control" id="desde" name="desde">
+                <label for="hasta" class="form-label">Resumen Hasta</label>
+                <input type="date" class="form-control" id="hasta" name="hasta">
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary">Imprimir</button>
+                <!--<button class="btn btn-success" id="descarga">Descargar PDF</button> /panerita/ajax/impresion/impresion-comprobante.php-->
+                <a class="btn btn-success" id="descarga">Descargar PDF</a>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>            
+            </div>
+        </div>
+    </div>
+</form>

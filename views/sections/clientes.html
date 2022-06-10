@@ -1,0 +1,136 @@
+<div class="border border-light rounded">
+    <div class="rounded-top p-2 alert-info d-flex justify-content-evenly flex-wrap" id="sectionHeader">
+        <!--<div class="col-md-2"><h3 id="section-title">👥 Clientes</h3></div>-->
+        <form method="POST" id="filtrarClientes">
+            <div class="row g-3 align-items-center" id="userMark">
+                <div class="col-auto">
+                    <input type="text" name="nombre" id="f_nombre" placeholder="Nombre de cliente.." class="form-control">
+                </div>
+                <div class="col-auto">
+                    <label for="tipo">Tipo</label>
+                </div>
+                <div class="col-auto">
+                    <select class="form-select" id="f_tipo" name="tipo">
+                        <option value="todos">Todos</option>
+                        <option value="representante">representante</option>
+                        <option value="distribuidor">distribuidor</option>
+                        <option value="mayorista">mayorista</option>
+                        <option value="minorista">minorista</option>
+                    </select>
+                </div>
+                <!--<div class="col-auto">
+                    <label for="zona">Zona</label>
+                </div>
+                <div class="col-auto">
+                    <select class="form-select" id="f_zona" name="zona">
+                        <option value="todos">Todos</option>
+                        <option value="catamarca">Catamarca</option>
+                        <option value="tucuman">Tucumán</option>
+                    </select>
+                </div> -->
+          </div>
+        </form>
+        <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#nuevoCliente">➕ Nuevo Cliente</button>
+        </div>
+    </div>
+    <div class="overflow-scroll overflow v-scroll pl-2">
+        <div class="" id="sectionFirst"></div>
+    </div>
+    <div class="rounded-bottom" id="sectionSecond">
+        <nav aria-label="...">
+            <ul class="pagination justify-content-center mb-1" id="paginacion">
+            </ul>
+        </nav>
+    </div>
+</div>
+
+
+<form class="modal fade" id="nuevoCliente" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">👥 Agregar Nuevo Cliente</h5>
+                <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="nuevoClienteForm">
+                <div class="form-group text-danger" id="error"></div>
+                <label for="representante" class="form-label">Nombre / Empresa</label>
+                <input type="text" class="form-control" id="nombre" name="nombre" maxlength="100" required minlength="10" placeholder="Maximo Cien Carecteres">
+                <label for="identificador" class="form-label">CUIL / CUIT / DNI</label>
+                <input type="text" class="form-control" id="identificador" name="identificador" min="0" placeholder="20226658402">
+
+                <label for="tipo">cliente</label>
+                <select class="form-select" id="tipo" name="tipo" aria-label="Floating label select example">
+                    <option selected>Seleccione un cliente</option>
+                    <option value="representante">Representante</option>
+                    <option value="distribuidor">Distribuidor</option>
+                    <option value="mayorista">Mayorista</option>
+                    <option value="minorista">Minorista</option>
+                </select>
+
+                <label for="tipo">Estado</label>
+                <select class="form-select" id="estado" name="estado" aria-label="Floating label select example">
+                    <option value="activo" selected>Activo</option>
+                    <option value="inactivo">Inactivo</option>
+                </select>
+
+                <label for="telefono">Telefono</label>
+                <input type="text" class="form-control" id="telefono" name="telefono" placeholder="+543865332311">
+                <label for="direccion">Direccion</label>
+                <input type="text" class="form-control" id="direccion" name="direccion" maxlength="50" required placeholder="Av. Australia 1995">
+                <label for="mail">Mail</label>
+                <input type="email" class="form-control" id="mail" name="mail" placeholder="cristiangramajo015@gmail.com">
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary">Agregar</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>            
+            </div>
+        </div>
+    </div>
+</form>
+
+<form class="modal fade" id="editarCliente" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">👥 Editar Cliente</h5>
+                <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group text-danger" id="error"></div>
+                <label for="representante" class="form-label">Nombre / Empresa</label>
+                <input type="text" class="form-control" id="e_nombre" name="nombre" maxlength="100" required minlength="10" placeholder="Maximo Cien Carecteres">
+                <label for="identificador" class="form-label">CUIL / CUIT / DNI</label>
+                <input type="text" class="form-control" id="e_identificador" name="identificador" min="0" placeholder="20226658402">
+
+                <label for="tipo">Tipo</label>
+                <select class="form-select" id="e_tipo" name="tipo" aria-label="Floating label select example">
+                    <option selected>Seleccione un cliente</option>
+                    <option value="representante">Representante</option>
+                    <option value="distribuidor">Distribuidor</option>
+                    <option value="mayorista">Mayorista</option>
+                    <option value="minorista">Minorista</option>
+                </select>
+
+                <label for="tipo">Estado</label>
+                <select class="form-select" id="e_estado" name="estado" aria-label="Floating label select example">
+                    <option value="activo" selected>Activo</option>
+                    <option value="inactivo">Inactivo</option>
+                </select>
+
+                <label for="telefono">Telefono</label>
+                <input type="text" class="form-control" id="e_telefono" name="telefono" placeholder="+543865332311">
+                <label for="direccion">Direccion</label>
+                <input type="text" class="form-control" id="e_direccion" name="direccion" maxlength="10" required placeholder="Av. Australia 1995">
+                <label for="mail">Mail</label>
+                <input type="email" class="form-control" id="e_mail" name="mail" placeholder="cristiangramajo015@gmail.com">
+                <input type="hidden" name="id_cliente" id="e_id">
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary">Agregar</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>            
+            </div>
+        </div>
+    </div>
+</form>

@@ -1,0 +1,63 @@
+<div class="border border-light rounded">
+    <div class="rounded-top p-2 alert-info d-flex justify-content-evenly flex-wrap" id="sectionHeader">
+        <!--<div class="col-md-2"><h3 id="section-title">📅 Cierre</h3></div>-->
+        <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+            <span class="pagado br-left"></span>
+            <span class="pendiente"></span>
+            <span class="deudor br-right"></span>
+        </div>
+        <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#consultarCierre">🔍 Consultar Cierre</button>
+        </div>
+    </div>
+    <div class="overflow-scroll overflow v-scroll pl-2">
+        <div id="error2"></div>
+        <div class="" id="sectionFirst"></div>
+    </div>
+    <div class="rounded-bottom" id="sectionSecond">
+        <nav aria-label="...">
+            <ul class="pagination justify-content-center mb-1" id="paginacion"> 
+            </ul>
+        </nav>
+    </div>
+</div>
+
+<form class="modal fade" id="consultarCierre" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">🔍 Consultar Cierre</h5>
+                <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group text-danger" id="error"></div>
+                <label for="desde" class="form-label">Resumen Desde</label>
+                <input type="date" class="form-control" id="desde" name="desde">
+                <label for="hasta" class="form-label">Resumen Hasta</label>
+                <input type="date" class="form-control" id="hasta" name="hasta">
+
+                <label for="estado" class="form-label">Estado Comprobante</label>
+                <select class="form-select" id="estado" name="estado" aria-label="Floating label select example">
+                    <option value="todos" selected>Todos</option>
+                    <option value="pagado">Pagado</option>
+                    <option value="pendiente">Pendiente</option>
+                    <option value="deudor">Deudor</option>
+                </select>
+
+                <label for="estado-cliente" class="form-label">Estado Cliente</label>
+                <select class="form-select" id="estado-cliente" name="estado-cliente" aria-label="Floating label select example">
+                    <option value="todos" selected>Todos</option>
+                    <option value="activo">Activo</option>
+                    <option value="inactivo">Inactivo</option>
+                </select>
+
+                <label for="identificador" class="form-label">Cliente</label>
+                <input type="text" class="form-control" id="identificador" name="identificador">
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary">Consultar</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>            
+            </div>
+        </div>
+    </div>
+</form>

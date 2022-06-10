@@ -1,0 +1,147 @@
+<div class="border border-light rounded">
+    <div class="rounded-top p-2 alert-info d-flex justify-content-center flex-wrap" id="sectionHeader">
+            <!--<div class="col-md-2"><h3 id="section-title">👤 Usuarios</h3></div>-->
+            <form method="POST" id="filtrarUsuarios">
+                <div class="row g-3 align-items-center" id="helperUsuario">
+                    <div class="col-auto">
+                        <span id="loader"></span>
+                    </div>
+                    <div class="col-auto">
+                        <input type="text" name="nombre" id="f_nombre" placeholder="Nombre de usuario.." class="form-control">
+                    </div>
+                    <div class="col-auto">
+                        <label for="zona">Tipo</label>
+                    </div>
+                    <div class="col-auto">
+                        <select class="form-select" id="f_tipo" name="tipo">
+                            <option value="todos">Todos</option>
+                            <option value="administrador">Administrador</option>
+                            <option value="empleado">Empleado</option>
+                            <option value="secretaria">Secretaria</option>
+                        </select>
+                    </div>
+                </div>
+            </form>
+            <div class="col-md-2 d-flex justify-content-end">
+                <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#nuevoUsuario">➕ Nuevo Usuario</button>
+                </div>
+            </div>
+    </div>
+    <div class="overflow-scroll overflow v-scroll">
+        <div class="" id="sectionFirst"></div>
+    </div>
+    <div class="rounded-bottom" id="sectionSecond">
+        <nav aria-label="...">
+            <ul class="pagination justify-content-center mb-1" id="paginacion"> 
+            </ul>
+        </nav>
+    </div>
+</div>
+
+
+<form class="modal fade" id="nuevoUsuario" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">👤 Agregar Nuevo Usuario</h5>
+                <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group text-danger" id="error"></div>
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="nombre" name="nombre" maxlength="100" required minlength="5" placeholder="Maximo Cinco Carecteres">
+                <label for="mail">Mail / Usuario</label>
+                <input type="email" class="form-control" id="mail" name="mail" placeholder="cristiangramajo015@gmail.com">
+                <label for="dni">DNI / CUIT</label>
+                <input type="number" class="form-control" id="dni" name="dni" required min="0" placeholder="20393567008">
+                <label for="nacimiento">Nacimiento</label>
+                <input type="date" class="form-control" id="nacimiento" name="nacimiento" required>
+                <label for="tipo" class="form-label">Tipo de Usuario</label>
+                <select class="form-select" id="tipo" name="tipo" aria-label="Default select example">
+                    <option value="administrador">Administrador</option>
+                    <option value="empleado">Empleado</option>
+                    <option value="secretaria">Secretaria</option>
+                </select>
+                <label for="estado" class="form-label">Estado</label>
+                <select class="form-select" id="estado" name="estado" aria-label="Default select example">
+                    <option value="activo">Activo</option>
+                    <option value="inactivo">Inactivo</option>
+                </select>
+                <label for="telefono" class="form-label">Telefono</label>
+                <input type="tel" id="telefono" name="telefono" pattern="([+])([0-9]){12}" class="form-control" required placeholder="+543865332311">
+                <label for="direccion" class="form-label">Direccion</label>
+                <input type="text" class="form-control" id="direccion" name="direccion" maxlength="50" placeholder="Maximo Cincuenta Caracteres..">
+
+                <label for="zona" class="form-label" id="label-zona">Zona</label>
+                <select class="form-select" id="zona" name="zona" aria-label="Default select example">
+                    <option value="catamarca" default>Catamarca</option>
+                    <option value="tucuman">Tucuman</option>
+                </select>
+
+                <label for="contra">Contraseña</label>
+                <input type="password" class="form-control" id="contra" name="contra" required>
+                <label for="contra-verifica">Repite Contraseña</label>
+                <input type="password" class="form-control" id="contra-verifica" name="contra-verifica" required>
+                
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary">Agregar</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>            
+            </div>
+        </div>
+    </div>
+</form>
+
+<form class="modal fade" id="editarUsuario" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">👤 Editar Usuario</h5>
+                <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group text-danger" id="error"></div>
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="e_nombre" name="nombre" maxlength="100" required minlength="5" placeholder="Maximo Cinco Carecteres">
+                <label for="mail">Mail / Usuario</label>
+                <input type="email" class="form-control" id="e_mail" name="mail" placeholder="cristiangramajo015@gmail.com">
+                <label for="dni">DNI / CUIT</label>
+                <input type="number" class="form-control" id="e_dni" name="dni" required min="0" placeholder="20393567008">
+                <label for="nacimiento">Nacimiento</label>
+                <input type="date" class="form-control" id="e_nacimiento" name="nacimiento" required>
+                <label for="tipo" class="form-label">Tipo de Usuario</label>
+                <select class="form-select" id="e_tipo" name="tipo" aria-label="Default select example">
+                    <option selected>Seleccione un tipo</option>
+                    <option value="administrador">Administrador</option>
+                    <option value="empleado">Empleado</option>
+                    <option value="secretaria">Secretaria</option>
+                </select>
+                <label for="estado" class="form-label">Estado</label>
+                <select class="form-select" id="e_estado" name="estado" aria-label="Default select example">
+                    <option selected>Seleccione un estado</option>
+                    <option value="activo">Activo</option>
+                    <option value="inactivo">Inactivo</option>
+                </select>
+                <label for="telefono" class="form-label">Telefono</label>
+                <input type="tel" id="e_telefono" name="telefono" pattern="([+])([0-9]){12}" class="form-control" required placeholder="+543865332311">
+                <label for="direccion" class="form-label">Direccion</label>
+                <input type="text" class="form-control" id="e_direccion" name="direccion" maxlength="50" placeholder="Maximo Cincuenta Caracteres..">
+                <label for="zona" class="form-label" id="label-zona-edit">Zona</label>
+                <select class="form-select" id="e_zona" name="zona" aria-label="Default select example">
+                    <option value="catamarca" default>Catamarca</option>
+                    <option value="tucuman">Tucuman</option>
+                </select>
+                <label for="contra">Contraseña</label>
+                <input type="password" class="form-control" id="e_contra" name="contra">
+                <label for="contra-verifica">Repite Contraseña</label>
+                <input type="password" class="form-control" id="e_contra-verifica" name="contra-verifica">
+                <input type="hidden" id="e_id" name="id_usuario">
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary">Agregar</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>            
+            </div>
+        </div>
+    </div>
+</form>

@@ -1,0 +1,32 @@
+<div class="border border-light rounded" id="comprobantes">
+    <div class="rounded-top p-2 alert-info d-flex justify-content-between flex-wrap" id="sectionHeader">
+        <h3 id="section-title">👤 Editar Mi Perfil</h3>        
+        <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+            <a class="btn btn-success" href="/panerita/foto-perfil">🖼️ Agregar / Editar foto</a>
+        </div>
+    </div>
+    <div class="p-3 bg-light" id="sectionFirst">
+        <form method="post" class="col-md-4 mx-auto" id="editarPerfil">
+            <div class="form-group text-danger" id="error"></div>
+            <label for="telefono" class="form-label">Telefono</label>
+            <input type="tel" id="telefono" name="telefono" pattern="([+])([0-9]){12}" class="form-control" required placeholder="+543865332311">
+            <label for="direccion" class="form-label">Direccion</label>
+            <input type="text" class="form-control" id="direccion" name="direccion" maxlength="50" placeholder="Maximo Cincuenta Caracteres..">
+            <label for="email">Mail</label>
+            <input type="email" class="form-control" name="email" id="email" placeholder="cristiangramajo015@gmail.com" maxlength="50">
+            <label for="contra">Contraseña</label>
+            <input type="password" class="form-control" name="contra" id="contra" maxlength="20">
+            <label for="contra-verifica">Repite Contraseña</label>
+            <input type="password" class="form-control" name="contra-verifica" id="contra-verifica" maxlength="20">
+            <div class="d-grid gap-2 mt-3">
+                <button type="submit" class="btn btn-success" disabled>Guardar Cambios</button>
+            </div>
+        </form>
+    </div>
+    <div class="rounded-bottom" id="sectionSecond">
+        <nav aria-label="...">
+            <ul class="pagination justify-content-center mb-1" id="paginacion"> 
+            </ul>
+        </nav>
+    </div>
+</div>

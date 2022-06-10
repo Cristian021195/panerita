@@ -1,0 +1,110 @@
+<div class="border border-light rounded" id="productos">
+    <div class="rounded-top p-2 alert-info d-flex justify-content-evenly flex-wrap" id="sectionHeader">
+        <!--<div class="col-md-4"><h3 id="section-title">🛒 Productos</h3></div>-->
+        <div class="col-auto">
+            <input type="text" id="producto" name="producto" placeholder="Nombre de producto" class="form-control">
+        </div>
+        <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modificarListado">💰 Modificar Todos</button>
+            <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#nuevoProducto">➕ Nuevo Producto</button>
+        </div>
+    </div>
+    <div class="overflow-scroll overflow v-scroll pl-2">
+        <div class="" id="sectionFirst"></div>
+    </div>
+    <div class="rounded-bottom" id="sectionSecond">
+        <nav aria-label="...">
+            <ul class="pagination justify-content-center mb-1" id="paginacion"> 
+            </ul>
+        </nav>
+    </div>
+</div>
+
+
+<form class="modal fade" id="modificarListado" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">💰 Modificar Listado de Precios</h5>
+                <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="todos-producto">
+                <div class="form-group text-danger" id="errores"></div>
+                <div class="form-group text-danger" id="error"></div>
+                <label for="representante" class="form-label">Representante</label>
+                <input type="number" class="form-control" id="base" name="base" step="0.1" max="100" min="-5" value="0">
+                <label for="representante" class="form-label">Distribuidor</label>
+                <input type="number" class="form-control" id="t_distribuidor" name="distribuidor" step="0.1" max="100" min="-5" value="0">
+                <label for="representante" class="form-label">Mayorista</label>
+                <input type="number" class="form-control" id="t_mayorista" name="mayorista" step="0.1" max="100" min="-5" value="0">
+                <label for="representante" class="form-label">Minorista</label>
+                <input type="number" class="form-control" id="t_minorista" name="minorista" step="0.1" max="100" min="-5" value="0">
+            </div>
+            <p class="container text-danger">⚠️ ¡Usar con precaución, ya que al modificar por 
+                porcentaje, se modificará todos los precios correspondientes, y no habrá vuelta atras! - Si desea modificar solo un listado deje los demas en cero.</p>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary">Modificar</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>                
+            </div>
+        </div>
+    </div>
+</form> 
+
+<form class="modal fade" id="nuevoProducto" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">➕ Agregar Nuevo Producto</h5>
+                <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="nuevo-producto">
+                <div class="form-group text-danger" id="errores"></div>
+                <div class="form-group text-danger" id="error2"></div>
+                <label for="representante" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="nombre" name="nombre" maxlength="100">
+                <label for="representante" class="form-label">Precio Representante</label>
+                <input type="number" class="form-control" id="precio" name="base" step="0.1" min="0" value="0">
+                <label for="representante" class="form-label">Precio Distribuidor</label>
+                <input type="number" class="form-control" id="distribuidor" name="distribuidor" step="0.1" min="0" value="0">
+                <label for="representante" class="form-label">Precio Mayorista</label>
+                <input type="number" class="form-control" id="mayorista" name="mayorista" step="0.1" min="0" value="0">
+                <label for="representante" class="form-label">Precio Minorista</label>
+                <input type="number" class="form-control" id="minorista" name="minorista" step="0.1" min="0" value="0">
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary">Agregar</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>            
+            </div>
+        </div>
+    </div>
+</form>
+
+<form class="modal fade" id="editarProducto" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Editar Producto</h5>
+                <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group text-danger" id="errores"></div>
+                <div class="form-group text-danger" id="error3"></div>
+                <label for="representante" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="e_nombre" name="nombre" maxlength="100">
+                <label for="base" class="form-label">Precio Representante</label>
+                <input type="number" class="form-control" id="e_base" name="base" step="0.01" min="0" value="0">
+                <label for="distribuidor" class="form-label">Precio Distribuidor</label>
+                <input type="number" class="form-control" id="e_distribuidor" name="distribuidor" step="0.01" min="0" value="0">
+                <label for="mayorista" class="form-label">Precio Mayorista</label>
+                <input type="number" class="form-control" id="e_mayorista" name="mayorista" step="0.01" min="0" value="0">
+                <label for="minorista" class="form-label">Precio Minorista</label>
+                <input type="number" class="form-control" id="e_minorista" name="minorista" step="0.01" min="0" value="0">
+                <input type="hidden" name="id_producto" id="e_id">
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary">Agregar</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>            
+            </div>
+        </div>
+    </div>
+</form>

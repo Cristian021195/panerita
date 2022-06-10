@@ -1,0 +1,62 @@
+<div class="border border-light rounded">
+    <div class="rounded-top p-2 alert-info d-flex justify-content-evenly flex-wrap" id="sectionHeader">
+        <!--<div class="col-md-2"><h3 id="section-title">📩 Cargas</h3></div>-->
+        <!--<div class="btn-group" role="group" aria-label="Basic mixed styles example">
+            <span class="pendiente br-left">Comprobantes: 250</span>
+            <span class="pagado br-right">Devoluciones: 5</span>
+            <span class="deudor">2</span>
+        </div>-->
+        <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#generarCarga">➕ Generar Carga</button>
+            <button type="button" class="btn btn-danger" id="limpiar">🗑️ Limpiar Todo</button>
+        </div>
+        <div class="row g-3 align-items-center">
+            <div class="col-auto">
+                <label for="cajones">N° Cajones</label>
+            </div>
+            <div class="col-auto">
+                <input type="number" name="cajones" id="cajones" placeholder="Numero de Cajones.." class="form-control" min="0">
+            </div>
+        </div>
+
+        <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+            <button class="btn btn-success" id="carga-general" disabled>🖨️ Carga General</span>
+            <button class="btn btn-success" id="comprobantes" disabled>🖨️ Comprobantes</span>
+            <!--<span class="deudor">2</span>-->
+        </div>
+    </div>
+    <div class="overflow-scroll overflow v-scroll pl-2 ">
+        <div id="error2"></div>
+        <div class="" id="sectionFirst"></div>
+    </div>
+    <div class="rounded-bottom" id="sectionSecond">
+        <nav aria-label="...">
+            <ul class="pagination justify-content-center mb-1" id="paginacion"> 
+            </ul>
+        </nav>
+    </div>
+</div>
+
+<form class="modal fade" id="generarCarga" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">📩 Generar Carga</h5>
+                <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="cuerpoCargaMasiva">
+                <div class="form-group text-danger" id="error"></div>
+                <label for="desde" class="form-label">Resumen Desde</label>
+                <input type="date" class="form-control" id="desde" name="desde">
+                <label for="hasta" class="form-label">Resumen Hasta</label>
+                <input type="date" class="form-control" id="hasta" name="hasta">
+                <label for="identificador" class="form-label">Cliente</label>
+                <input type="text" class="form-control" id="identificador" name="identificador" placeholder="Todos (No escribir nada)">
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary">Buscar Comprobantes</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>            
+            </div>
+        </div>
+    </div>
+</form>

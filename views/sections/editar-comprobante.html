@@ -1,0 +1,50 @@
+<div class="border border-light rounded" id="editar-comprobante">
+    <div class="rounded-top p-2 alert-info d-flex justify-content-center flex-wrap" id="sectionHeader">
+        <div class="col-auto">
+            <div class="form-group text-danger" id="loader" style="position: absolute; left: 3em;"></div>
+            <h3 id="section-title">Editar Comprobante</h3>
+        </div>
+    </div>
+    <div class="p-3 bg-light mx-auto row" id="sectionFirst">
+        <div class="col-md-6 col-lg-5 mx-auto shadow-lg p-3 bg-white rounded mb-2">
+            <form method="POST" id="editarComprobante">
+                <div id="error_loader"></div>
+                <label for="cliente">Cliente</label>
+                <input type="text" class="form-control mb-1" id="d_cliente" name="cliente" readonly>
+                <!--<input type="hidden" name="tipo" id="tipo">
+                <label for="vendedor-res">Vendedor</label>
+                <select class="form-select mb-2" id="vendedor-res" name="vendedor-res" aria-label="Floating label select example"></select>-->
+                <button type="submit" class="btn btn-info" id="generarComprobanteButton">✔️ Generar</button>
+            <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#listadoProductos" id="agregarProductos">➕ Agregar Productos</button>
+            </form>
+        </div>
+        <div class="col-md-6 col-lg-5 mx-auto shadow-lg p-3 bg-white rounded mb-4">
+            <div id="stock" class="overflow-scroll" style="height:320px"></div>
+        </div>
+        <div class="p-3 bg-light text-center" id="sectionAux"></div>
+    </div>
+    <div class="overflow-scroll overflow v-scroll-sm pl-2" id="sectionSecond"></div>
+</div>
+
+<div class="modal fade" id="listadoProductos" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title d-flex align-items-center" id="exampleModalLabel"><span id="modal_loader" class="float-left"></span> Productos A Cargar</h5>
+                <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group text-danger" id="error"></div>
+                <!--<form id="filtrarProductos" method="POST">
+                    <input type="text" class="form-control mb-3" id="cliente" name="cliente" placeholder="Buscar productos..">
+                </form>-->
+                <div class="table-responsive">
+                    <div id="sectionFirstModal" class="altura-50 overflow-auto"></div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>

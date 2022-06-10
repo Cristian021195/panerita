@@ -1,0 +1,102 @@
+<div class="border border-light rounded" id="nuevo-comprobante">
+    <div class="rounded-top p-2 alert-info d-flex justify-content-center flex-wrap" id="sectionHeader">
+        <div class="col-auto">
+            <h3 id="section-title">Nuevo Comprobante</h3>
+        </div>
+    </div>
+    <div class="p-3 bg-light mx-auto row" id="sectionFirst">
+        <div class="col-md-6 col-lg-5 mx-auto shadow-lg p-3 bg-white rounded mb-4">
+            <form method="post" id="filtrarClientes">
+                <div id="error_loader"></div>
+                <label for="cliente">Cliente</label>
+                <input type="text" class="form-control mb-1" id="f_cliente" name="nombre" placeholder="Ingrese nombre del cliente..">
+            </form>
+            <form method="POST" id="generarComprobante">
+                <label for="cliente-res">Cliente</label>
+                <select class="form-select mb-1" id="cliente-res" name="cliente-res" aria-label="Floating label select example"></select>
+                <input type="hidden" name="tipo" id="tipo">
+                <input type="hidden" name="zona" id="zona">
+                <label for="vendedor-res">Vendedor</label>
+                <select class="form-select mb-2" id="vendedor-res" name="vendedor-res" aria-label="Floating label select example"></select>
+                <button type="submit" class="btn btn-info" id="generarComprobanteButton">✔️ Generar</button>
+                <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#listadoProductos" id="nuevoComprobante">➕ Agregar Productos</button>
+                <button type="button" class="btn btn-info" data-toggle="modal" data-target="#nuevoCliente">➕ Nuevo Cliente</button>
+            </form>
+        </div>
+        <div class="col-md-6 col-lg-5 mx-auto shadow-lg p-3 bg-white rounded mb-4">
+            <div id="stock" class="overflow-scroll" style="height:320px"></div>
+        </div>
+        <div class="p-3 bg-light text-center" id="sectionAux"></div>
+    </div>
+
+    <div class="rounded-bottom" id="sectionSecond">
+        <ol id="listado" class="text-center"></ol>
+        <!--<nav aria-label="...">
+            <ul class="pagination justify-content-center mb-1" id="paginacion"> 
+            </ul>
+        </nav>-->
+    </div>
+</div>
+
+<div class="modal fade" id="listadoProductos" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header mx-4">
+                <input type="text" name="producto" id="producto" placeholder="Codigo o nombre de producto..." class="form-control">
+            </div>
+            <div class="modal-body">
+                <div class="form-group text-danger" id="error"></div>
+                <div class="table-responsive">
+                    <div id="sectionFirstModal" class="altura-50 overflow-auto"></div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<form class="modal fade" id="nuevoCliente" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">👥 Agregar Nuevo Cliente</h5>
+                <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="nuevoClienteForm">
+                <div class="form-group text-danger" id="error"></div>
+                <label for="representante" class="form-label">Nombre / Empresa</label>
+                <input type="text" class="form-control" id="nombre" name="nombre" maxlength="100" required minlength="5" placeholder="Maximo Cinco Carecteres">
+                <label for="identificador" class="form-label">CUIL / CUIT / DNI</label>
+                <input type="text" class="form-control" id="identificador" name="identificador" min="0" placeholder="20226658402">
+
+                <label for="tipo">cliente</label>
+                <select class="form-select" id="tipo" name="tipo" aria-label="Floating label select example">
+                    <option selected>Seleccione un cliente</option>
+                    <option value="representante">Representante</option>
+                    <option value="distribuidor">Distribuidor</option>
+                    <option value="mayorista">Mayorista</option>
+                    <option value="minorista">Minorista</option>
+                </select>
+
+                <label for="tipo">Estado</label>
+                <select class="form-select" id="estado" name="estado" aria-label="Floating label select example">
+                    <option value="activo" selected>Activo</option>
+                    <option value="inactivo">Inactivo</option>
+                </select>
+
+                <label for="telefono">Telefono</label>
+                <input type="text" class="form-control" id="telefono" name="telefono" placeholder="+543865332311">
+                <label for="direccion">Direccion</label>
+                <input type="text" class="form-control" id="direccion" name="direccion" maxlength="50" required placeholder="Av. Australia 1995">
+                <label for="mail">Mail</label>
+                <input type="email" class="form-control" id="mail" name="mail" placeholder="cristiangramajo015@gmail.com">
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary">Agregar</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>            
+            </div>
+        </div>
+    </div>
+</form>

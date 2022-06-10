@@ -1,0 +1,94 @@
+<div class="container-fluid bg-primary">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary" data-toggle-duration="200" data-side-color="" data-letter-color=""><!--Podemos dejar los data vacios-->
+        <div class="container"><!--los colores son valores de bootstrap, y pueden ir sin bg-->
+            <a class="navbar-brand" id="titulo" href="/panerita">Distribuidora</a>
+            <button class="navbar-toggler" type="button">
+                <span class="navbar-toggler-icon"></span><!--console.log(document.getElementById('titulo'));-->
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/panerita/comprobantes">📁 Comprobantes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/panerita/productos">🛒 Productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/panerita/clientes">👥 Clientes</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/panerita/usuarios">👤 Usuarios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/panerita/notas">📝 Notas</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link active" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-expanded="false">📥 Gestion <b>▼</b></a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li class="nav-item"><a class="dropdown-item" href="/panerita/cierre">📅 Cierre</a></li>
+                            <li class="nav-item"><a class="dropdown-item" href="/panerita/cargas">📩 Cargas</a></li>
+                            <li class="nav-item"><a class="dropdown-item" href="/panerita/carga-masiva">🖨️ Carga Masiva</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link active" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-expanded="false">💻 Analisis <b>▼</b></a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li class="nav-item"><a class="dropdown-item" href="/panerita/ventas">📈 Resumen Ventas</a></li>
+                            <li class="nav-item"><a class="dropdown-item" href="/panerita/stock">📦 Stock</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown text-center">
+                        <a class="btn btn-dark fw-bold navbarDropdown" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-expanded="false"></a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="/panerita/perfil">👤 Editar Mi Perfil</a></li>
+                            <li><a class="dropdown-item" href="#" data-toggle="modal" data-target="#logout">🚪 Cerrar Sesion</a></li>
+                        </ul>
+                    </li>
+                    <!--<li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>📁🛒👥👤📅🖨️📝✏️🗑️➕📊📈📩
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-expanded="false">
+                            Dropdown
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>-->
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
+<form class="modal fade" id="logout" action="ajax/logout.php" method="POST" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">¿Esta seguro de cerrar sesion?</h5>
+                <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group" id="error">
+                </div>
+                <input type="hidden" name="salir" value="true">
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary">Salir</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>            
+            </div>
+        </div>
+    </div>
+</form>

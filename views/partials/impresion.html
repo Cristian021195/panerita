@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    
+</body>
+<script>
+    document.addEventListener('DOMContentLoaded', (e)=>{
+        setTimeout(() => {
+            print();  
+        }, 100);//podriamos fijar una tolerancia si da problemas
+        
+        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {//expresion regular evalua navegador
+            window.onfocus = function(){window.close();}
+        } else {
+            window.onafterprint = function(e){
+            window.close();
+            }
+        }
+    });
+</script>
+<style>
+    /*ESTILOS GENERALES*/
+    *{
+        font-family: sans-serif;
+    }
+    table{
+        border-collapse: collapse;
+    }
+    table tr td, table tr th{
+        border: solid 1px #000;
+        padding: 0.1em 0.2em 0.1em 0.2em;
+    }
+    
+    .comprobante{
+        background-color: #faf1ac;
+        margin-bottom: 1em;
+    }
+    .centrado{
+        position: absolute;/*background-color: red;*/
+        width: 100%;
+        padding-top: 1em;
+        display: flex;
+        justify-content: center;
+        opacity: 0.2;
+    }
+    .contacto, .principal, .detalle, .cierre{
+        margin-bottom: 0.4em;
+    }
+    @media print {/*ESTILOS DE IMPRESION*/
+        *{
+            font-family: sans-serif;
+        }
+        /*table {
+            page-break-inside:avoid;
+            page-break-after:auto;
+        }*/
+        .sin-corte{
+            page-break-inside:avoid;
+            page-break-after:auto;
+            border: solid 1px #000 ; 
+            border-radius: .1em; 
+        }
+        .sin-corte{
+            page-break-inside:avoid;
+            page-break-after:auto;
+            border: solid 1px #000 ; 
+            border-radius: .1em;
+        }
+        .comprobante{ 
+            page-break-inside:avoid;
+            page-break-after:auto;
+            border: solid 1px #000 ; 
+            border-radius: .1em; 
+            padding: 0.5em 0em 0.5em 1em; 
+            box-shadow: 0 0 0 40em #faf1ac inset !important;
+        }
+        .contacto, .principal, .detalle, .cierre{
+            margin-bottom: 0.4em;
+        }
+        .hovered tr:nth-child(even){
+            box-shadow: 0 0 0 1em #dcdcdc inset !important;
+        }
+        .centrado{
+            opacity: 0.2;
+        }
+    }
+</style>
+</html>

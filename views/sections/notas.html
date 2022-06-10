@@ -1,0 +1,55 @@
+<div class="border border-light rounded">
+    <div class="rounded-top p-2 alert-info d-flex justify-content-center flex-wrap" id="sectionHeader">
+        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#nuevaNota">➕ Nueva Nota</button>
+    </div>
+    <div class="overflow-scroll overflow v-scroll pl-2">
+        <div class="" id="sectionFirst"></div>
+    </div>
+    <div class="rounded-bottom" id="sectionSecond">
+        <nav aria-label="...">
+            <ul class="pagination justify-content-center mb-1" id="paginacion"> 
+            </ul>
+        </nav>
+    </div>
+</div>
+
+
+<form class="modal fade" id="nuevaNota" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">➕ Agregar Nueva Nota</h5>
+                <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group text-danger" id="error"></div>
+                <textarea class="form-control" rows="10" required name="contenido" id="contenido" placeholder="Ingrese su nota, no mas de 500 caracteres.." minlength="16" maxlength="500"></textarea>
+                <!--<input type="hidden" name="usuario" value="">-->
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary">Guardar</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>            
+            </div>
+        </div>
+    </div>
+</form>
+
+<form class="modal fade" id="editarNota" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="fechaNota"></h5>
+                <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group text-danger" id="error"></div>
+                <textarea class="form-control" rows="10" required name="contenido" id="contenidoNota" placeholder="Ingrese su nota, no mas de 500 caracteres.." minlength="16" maxlength="500"></textarea>
+                <input type="hidden" id="idNota" name="idNota" value="">
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary">Guardar</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>            
+            </div>
+        </div>
+    </div>
+</form>

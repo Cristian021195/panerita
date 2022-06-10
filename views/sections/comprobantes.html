@@ -1,0 +1,82 @@
+<div class="border border-light rounded" id="comprobantes">
+    <div class="rounded-top p-2 alert-info d-flex justify-content-evenly flex-wrap" id="sectionHeader">
+        <!--<div class="col-md-2"><h4 id="section-title">📁 Comprobantes</h4></div>-->
+        <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+            <span id="loader"></span>
+            <span class="pagado br-left"></span>
+            <span class="pendiente"></span>
+            <span class="deudor br-right"></span>
+        </div>
+        <form method="POST" id="filtrarComprobantes">
+            <div class="row g-3 align-items-center">
+                <div class="col-auto">
+                    <label for="comprobante">Cliente / N°</label>
+                </div>
+                <div class="col-auto">
+                    <input type="text" name="comprobante" id="f_comprobante" placeholder="Nombre de cliente.." class="form-control">
+                </div>
+                <div class="col-auto">
+                    <label for="estado">Estado</label>
+                </div>
+                <div class="col-auto">
+                    <select class="form-select" id="f_estado" name="estado">
+                        <option value="todos">Todos</option>
+                        <option value="pagado">Pagado</option>
+                        <option value="pendiente">Pendiente</option>
+                        <option value="deudor">Deudor</option>
+                    </select>
+                </div>
+            </div>
+        </form>
+        <div class="btn-group" role="group" aria-label="Basic mixed styles example" id="gestion-comprobante">
+            <a type="button" class="btn btn-info" href="/panerita/nuevo-comprobante">➕ Nuevo Comprobante</a>
+            <!--<button type="button" class="btn btn-warning" id="eliminarPagados">🗑️ Eliminar Pagados</button>-->
+        </div>
+    </div>
+    <div class="overflow-scroll overflow v-scroll pl-2">
+        <div class="" id="sectionFirst"></div>
+    </div>
+    <div class="rounded-bottom" id="sectionSecond">
+        <nav aria-label="...">
+            <ul class="pagination justify-content-center mb-1" id="paginacion"> 
+            </ul>
+        </nav>
+    </div>
+</div>
+
+
+<!--<form class="modal fade" id="formularioComprobante" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <input type="password" class="form-control mb-3" id="cliente" name="cliente" placeholder="Ingrese nombre del cliente..">
+                <div class="form-floating mb-3">
+                    <select class="form-select" id="vendedor" name="vendedor" aria-label="Floating label select example">
+                      <option selected>Seleccione un cliente</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </select>
+                    <label for="vendedor">cliente</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <select class="form-select" id="vendedor" name="vendedor" aria-label="Floating label select example">
+                      <option selected>Seleccione un vendedor</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </select>
+                    <label for="vendedor">Vendedor</label>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary">Iniciar</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>                
+            </div>
+        </div>
+    </div>
+</form>-->
